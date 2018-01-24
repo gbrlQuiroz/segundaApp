@@ -26,6 +26,8 @@ export class NumeroAleatorioComponent implements OnInit {
   }
 
   colorHex(): String {
-    return '#' + this.generarRandom() + this.generarRandom() + this.generarRandom();
+    this.colorFondo = '#' + this.generarRandom() + this.generarRandom() + this.generarRandom();
+    // return '#' + this.generarRandom() + this.generarRandom() + this.generarRandom();
+    return this.colorFondo;
   }
 }

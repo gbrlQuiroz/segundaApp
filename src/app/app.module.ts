@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NumeroAleatorioComponent } from './numero-aleatorio/numero-aleatorio.component';
+import { SaludosComponent } from './saludos/saludos.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NumeroAleatorioComponent
+    NumeroAleatorioComponent,
+    SaludosComponent
   ],
   imports: [
     BrowserModule,
