@@ -9,9 +9,10 @@ import { NumeroAleatorioComponent } from './numero-aleatorio/numero-aleatorio.co
 import { SaludosComponent } from './saludos/saludos.component';
 import { OcultarComponent } from './ocultar/ocultar.component';
 import { EstilosComponent } from './estilos/estilos.component';
+import { ListasComponent } from './listas/listas.component';
 
 @NgModule({
-  declarations: [AppComponent, NumeroAleatorioComponent, SaludosComponent, OcultarComponent, EstilosComponent],
+  declarations: [AppComponent, NumeroAleatorioComponent, SaludosComponent, OcultarComponent, EstilosComponent, ListasComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]

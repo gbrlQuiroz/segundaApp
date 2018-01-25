@@ -1,0 +1,19 @@
+<ul>
+  <li *ngFor="let dato of datos; index as indice; first as esPrimero; last as esUltimo; odd as esImpar">
+    Nombre:{{dato.nombre}}
+    <br/>Edad: {{dato.edad}}
+    <br/>
+    <!--     <span *ngIf="esPrimero">{{indice}}-esPrimero</span>
+    <span *ngIf="indice == 1">{{indice}}-El desarrollador</span>
+    <span *ngIf="esUltimo">{{indice}}-esUltimo</span> -->
+    <span *ngIf="esImpar">{{indice}}-esPar</span>
+  </li>
+</ul>
+
+
+<ul>
+  <li *ngFor="let dato of datos">
+    <!-- <a href="http://google.com/#q={{dato.nombre}}"> {{dato.nombre}} </a> -->
+    <a (click)="mostrarMas(dato)"> {{dato.nombre}} </a>
+  </li>
+</ul>
