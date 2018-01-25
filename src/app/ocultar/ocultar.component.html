@@ -1,0 +1,36 @@
+<button (click)="ocultar1 = !ocultar1">Mosrar/Ocultar Primer</button>
+<button (click)="ocultar2 = !ocultar2">Mosrar/Ocultar Primer</button>
+<br/> valor de ocultar1: {{ocultar1}}
+<br/> valor de ocultar2: {{ocultar2}}
+<hr/>
+
+<div *ngIf="ocultar1">
+  <h2>Primer Título</h2>
+  <p>gabriel quiroz olvera</p>
+</div>
+
+<div *ngIf="ocultar2; else otroTexto">
+  <h2>Segundo Título</h2>
+  <p>lupita olvera camarillo</p>
+</div>
+<ng-template #otroTexto>
+  <h2>Otro Título</h2>
+  <p>lourdes quiroz olvera</p>
+</ng-template>
+
+<button (click)="esValido = !esValido">Switch</button>
+<div *ngIf="esValido; then contenidoThen else contenidoElse">que sera....</div>
+<ng-template #contenidoThen>Cuando entra al THEN</ng-template>
+<ng-template #contenidoElse>Cuando entra al ELSE</ng-template>
+<hr/>
+
+<div [ngSwitch]="diasSemana">
+  <p *ngSwitchCase="'lunes'">Tomar café y trabajar</p>
+  <p *ngSwitchCase="'martes'">No casarme y evitar barcos</p>
+  <p *ngSwitchCase="'miercoles'">Sobrevivir al día más largo de la semana</p>
+  <p *ngSwitchCase="'jueves'">Hacer simulacro de viernes</p>
+  <p *ngSwitchCase="'viernes'">Actualizar redes sociales</p>
+  <p *ngSwitchDefault>Escribe algun dia (lunes...viernes)</p>
+</div>
+<!-- CUIDADO: se debe importar===> import { FormsModule } from '@angular/forms'; -->
+<input type="text" [(ngModel)]="diasSemana" />
