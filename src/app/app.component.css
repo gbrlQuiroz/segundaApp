@@ -1,0 +1,5 @@
+.activo {
+  color: red !important;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
